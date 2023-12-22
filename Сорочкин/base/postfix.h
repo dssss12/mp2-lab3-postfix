@@ -11,6 +11,7 @@
 using namespace std;
 
 class TPostfix {
+
 	string infix;
 	string postfix;
 	vector<char> lexems;
@@ -18,12 +19,15 @@ class TPostfix {
 	static map<char, int> priority;
 	void ParseInfix();
 	void ToPostfix();
+
 public:
+
 	TPostfix(string infx);
 	string GetInfix() const;
 	string GetPostfix() const;
 	vector<char> GetOperands() const;
 	double Calculate(const map<char, double>& values);
+
 };
 
 #endif
